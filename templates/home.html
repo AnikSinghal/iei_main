@@ -1,11 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to [Your Club/Society Name]</h1>
+        <p>Inspiring Innovation and Creativity</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Our club/society is dedicated to [Your Mission or Purpose]. We aim to [goals or objectives].</p>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+    <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>Step 1</h3>
+                <p>Description of step 1.</p>
+            </div>
+            <div class="step">
+                <h3>Step 2</h3>
+                <p>Description of step 2.</p>
+            </div>
+            <div class="step">
+                <h3>Step 3</h3>
+                <p>Description of step 3.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery">
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Image 1">
+            <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image 2">
+            <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</section>
+{% endblock %}
