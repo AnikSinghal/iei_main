@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+</head>
+<body>
+    <div class="admin-panel">
+        <h1>Admin Panel</h1>
+        <p>View link click statistics below:</p>
+        <ul>
+            <li>Home: {{ click_stats['home'] }} clicks</li>
+            <li>About: {{ click_stats['about'] }} clicks</li>
+            <li>Events: {{ click_stats['events'] }} clicks</li>
+            <li>Members: {{ click_stats['members'] }} clicks</li>
+            <li>Simon Game: {{ click_stats['simon'] }} clicks</li>
+        </ul>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
