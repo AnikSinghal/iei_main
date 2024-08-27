@@ -1,0 +1,104 @@
+*{ 
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    overflow: hidden;
+}
+.home a{
+    text-decoration: none;
+}
+.home h1{
+    color: #fff;
+    text-shadow: 4px 4px black;
+    font-size: 2.5rem;
+    position: absolute;
+    top:5%;
+    left:3%;
+    cursor: pointer;
+}
+.home h1:hover {
+    text-shadow: 2px 2px black;
+}
+.score{
+    color: #fff;
+    text-shadow: 4px 4px black;
+    font-size: 12rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns:auto auto;
+    width: 100vw;
+    height: 100vh;
+    gap: 4px;
+}
+.red{
+    height:100%;
+    width: 100%;
+    background-color: red;
+}
+.blue{
+    height:100% ;
+    width: 100%;
+    background-color: blue;
+}
+.green{
+    height:100% ;
+    width: 100%;
+    background-color: green;
+}
+.yellow{
+    height:100% ;
+    width: 100%;
+    background-color: yellow;
+}
+
+.game-over-screen {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.2); /* Red background with 20% opacity */
+    color: #fff;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    z-index: 1000; /* Ensure it's on top of other content */
+    text-shadow: 2px 2px 4px #000; /* Optional: add shadow to the text */
+}
+
+.game-over-screen h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+}
+
+.game-over-screen p {
+    font-size: 3rem;
+}
+.high h1{
+    color: #fff;
+    text-shadow: 4px 4px black;
+    font-size: 32px;
+    position: absolute;
+    top: 5%;
+    left:85%;
+}
+.high h2{
+    color: #fff;
+    text-shadow: 4px 4px black;
+    font-size: 32px;
+    position: absolute;
+    top: 5%;
+    left: 97%;
+}

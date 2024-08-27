@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="../static/css/simon.css">
+</head>
+<body>
+    <div class="home"><a href="/"><h1>Home</h1></a></div>
+    <h1 class="score">0</h1>
+    <div class="grid">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+    </div>
+    <div class="high">
+        <h1>High Score:</h1>
+        <h2 id="highScore">{{ highscore }}</h2>
+    </div>
+    <!-- Game Over Screen -->
+    <div class="game-over-screen" id="gameOverScreen">
+        <h1>GAME OVER!</h1>
+        <p id="finalScore"></p>
+    </div>
+
+    <script src="../static/js/simon.js"></script>
+</body>
+</html>
