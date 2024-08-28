@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-from flask import Flask
-=======
-from flask import Flask,render_template
->>>>>>> a7fc744e4cdc84158a3cc54aa503dde7bbf38b61
-=======
 from flask import Flask, render_template, session, redirect, url_for, request, flash
->>>>>>> 2658aa7021a0ae049de33b07ab0bbe37d17a93c8
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -25,17 +17,9 @@ click_stats = {
 
 # Routes for each page
 @app.route('/')
-<<<<<<< HEAD
-def hello_world():
-<<<<<<< HEAD
-    return 'Hello, World!'
-=======
-=======
 def home():
     click_stats['home'] += 1
->>>>>>> 2658aa7021a0ae049de33b07ab0bbe37d17a93c8
     return render_template('home.html')
->>>>>>> a7fc744e4cdc84158a3cc54aa503dde7bbf38b61
 
 @app.route('/about')
 def about():
@@ -90,6 +74,6 @@ def logout():
 if __name__ == '__main__':
     app.run(
         debug=True,
-            host="0.0.0.0",
+            # host="0.0.0.0",
             port=5000
             )

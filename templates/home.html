@@ -1,55 +1,68 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-
-=======
 {% extends "base.html" %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero">
+<section id="home" class="hero">
+    <div class="slideshow">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
     <div class="hero-content">
-        <h1>Welcome to [Your Club/Society Name]</h1>
-        <p>Inspiring Innovation and Creativity</p>
+        <div class="typing-wrapper">
+            <h1 class="typing"></h1>
+        </div>
+        <p class="static-text">TEAM ORION</p>
+        <a href="#about" class="cta-button">Learn More</a>
+        <a href="#join" class="cta-button">Join Now</a>
     </div>
 </section>
 
-<!-- About Section -->
-<section class="about">
-    <div class="container">
-        <h2>About Us</h2>
-        <p>Our club/society is dedicated to [Your Mission or Purpose]. We aim to [goals or objectives].</p>
+<!-- About Us Section -->
+<section id="about" class="about slide-in-section">
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='aboutme.png') }}" alt="About Us Image">
+    </div>
+    <div class="about-text">
+        <h2>About Our Society</h2>
+        <p>The Institution of Engineers (India) [IEI] is a statutory body to promote and advance the engineering and technology, established in 1920 and incorporated by Royal Charter in 1935. It is the largest multi-disciplinary professional body of engineers encompassing 15 (fifteen) engineering disciplines with a membership of more than 820 thousand and serving the nation for more than 9 decades. The IEI has its headquarters located in Kolkata with national presence through more than hundred Centres and several Overseas Chapters, Foras and Organ. IEI (Institution of Engineers India) Thapar Chapter is a technical society of Thapar University which organizes various workshops, technical exams, lecture series by industry experts. This society is open for all technical branches of engineering.</p>
     </div>
 </section>
 
 <!-- How It Works Section -->
 <section class="how-it-works">
     <div class="container">
-        <h2>How It Works</h2>
+        <h1>Events</h1>
         <div class="steps">
-            <div class="step">
-                <h3>Step 1</h3>
-                <p>Description of step 1.</p>
+            
+            <div class="step card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="{{ url_for('static', filename='image2.png') }}" alt="image2">
+                        <h2>Orion Techfest</h2>
+                    </div>
+                    <div class="card-back">
+                        <p>Orion has emerged as TIET's own Science and Technology Festival, an amalgamation of scientific thinking and innovation. It has been built with an aim to enhance the technical culture and to empower the technological spirit in the campus. Orion is a symbol of competitive spirit,
+                            achievement and pride. In this journey, you will find different ways to solve several industrial challenges, and encounter unique competition
+                            along with some motivating orations, state of the art technology and breathtaking performances.</p>
+                    </div>
+                </div>
             </div>
-            <div class="step">
-                <h3>Step 2</h3>
-                <p>Description of step 2.</p>
+            
+            <div class="step card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>Society Fair</h2>
+                    </div>
+                    <div class="card-back">
+                        <p>Orion, the university's esteemed tech society, will be prominently featured at the upcoming Society Fair. As a leading organization within the technological domain, Orion offers a platform for students passionate about technology to engage, innovate, and collaborate.</p>
+                    </div>
+                </div>
             </div>
-            <div class="step">
-                <h3>Step 3</h3>
-                <p>Description of step 3.</p>
-            </div>
+
         </div>
     </div>
 </section>
@@ -67,4 +80,3 @@
     </div>
 </section>
 {% endblock %}
->>>>>>> a7fc744e4cdc84158a3cc54aa503dde7bbf38b61

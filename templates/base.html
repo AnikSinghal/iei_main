@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
 
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="/">
-                <img src="{{ url_for('static', filename='images/IEI.png') }}" alt="Logo">
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="/" onclick="trackClick('home_link')">Home</a></li>
-            <li><a href="/about" onclick="trackClick('about_link')">About</a></li>
-            <li><a href="/events" onclick="trackClick('events_link')">Events</a></li>
-            <li><a href="/members" onclick="trackClick('members_link')">Members</a></li>
+    
+</head>
+<header>
+    <a href="#home" class="logo-link">
+        <img src="logo.png" class="logo">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-right">
-            <!-- Content for the right side (e.g., search bar, buttons, etc.) -->
-        </div>
     </nav>
+    <a href="#join" class="join-button">Join Us</a>
+</header>
+<body>
+    
 
     <div id="particles-js"></div>
     <div class="container">
@@ -44,47 +47,7 @@
     </footer>
 
     <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
-    <script>
-        function trackClick(linkName) {
-            fetch('/track_click', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: 'link_name=' + encodeURIComponent(linkName)
-            });
-        }
-        function createStar() {
-            const star = document.createElement('div');
-            star.className = 'star';
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
-            const size = Math.random() * 4;
-            star.style.left = x + 'px';
-            star.style.top = y + 'px';
-            star.style.width = size + 'px';
-            star.style.height = size + 'px';
-            document.body.appendChild(star);
-            return star;
-        }
-
-        function twinklingStars() {
-            const stars = [];
-            const count = 200;
-
-            for (let i = 0; i < count; i++) {
-                stars.push(createStar());
-            }
-
-            setInterval(() => {
-                stars.forEach(star => {
-                    star.style.opacity = Math.random(); // Randomize opacity
-                });
-            }, 100); // Change opacity every 100 milliseconds
-        }
-
-        twinklingStars();
-    </script>
+    
 </body>
 
 </html>
