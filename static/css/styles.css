@@ -171,7 +171,7 @@ body, h1, h2, h3, p, a {
 
 /* About Section Styles */
 .about {
-    background-image: linear-gradient(to bottom right, rgb(17, 2, 79), rgb(0, 255, 247),rgb(17, 2, 79));
+    background-image: linear-gradient(to bottom right, rgb(56, 6, 113), rgb(1, 8, 25), rgb(116, 139, 199), rgb(4, 19, 56),rgb(0, 0, 0));
     color: #efeef7;
     display: flex;
     align-items: center;
@@ -465,4 +465,23 @@ body, h1, h2, h3, p, a {
 
 .static-text {
     font-size: 1.5rem; /* Make sure it matches with the static text size */
+}
+.how-it-works {
+    padding: 50px 20px;
+    text-align: center;
+    background: url('https://media.giphy.com/media/26BRGoqbUQvk8nwTC/giphy.gif') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    animation: backgroundMove 30s linear infinite; /* Apply background animation */
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start from left off-screen */
+        opacity: 0; /* Hidden initially */
+    }
+    to {
+        transform: translateX(0); /* Slide to its normal position */
+        opacity: 1; /* Fade in */
+    }
 }
