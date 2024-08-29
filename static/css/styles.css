@@ -448,3 +448,21 @@ body, h1, h2, h3, p, a {
         opacity: 0;
     }
 }
+.typing-wrapper {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 3rem; /* Ensure this matches the h1 font size */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for typing effect */
+}
+
+.typing {
+    display: inline-block;
+    border-right: .15em solid orange; /* Blinking cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.static-text {
+    font-size: 1.5rem; /* Make sure it matches with the static text size */
+}
