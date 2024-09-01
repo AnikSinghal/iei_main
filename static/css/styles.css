@@ -3,16 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /* Body Background and Text Color */
 body {
     /* background: linear-gradient(180deg, #030000 90%, #0c0244 10%); */
-    background-image: linear-gradient(to bottom left, rgb(17, 2, 79), rgb(0, 255, 247),rgb(17, 2, 79));
+    background-image: linear-gradient(to bottom right, rgb(56, 6, 113), rgb(1, 8, 25), rgb(116, 139, 199), rgb(4, 19, 56), rgb(0, 0, 0));
+    
     color: #433D8B;
     font-family: 'Caligraphy', sans-serif;
     margin: 0;
     padding: 0;
+}
+.logo{
+    right: 3rem;
+    position: relative;
+    height: 14rem;
 }
 .slideshow {
     position: absolute;
@@ -42,12 +49,12 @@ body {
 }
 
 .slide:nth-child(2) {
-    background-image: url('../images/image1.png');
+    background-image: url('../images/home1.jpeg');
     animation-delay: 3s;
 }
 
 .slide:nth-child(3) {
-    background-image: url('../images/image2.png');
+    background-image: url('../images/home2.jpeg');
     animation-delay: 6s;
 }
 
@@ -106,9 +113,9 @@ nav a:hover {
     color: #ff6600; /* Change color on hover */
 }
 /* Apply Text Glow */
-body, h1, h2, h3, p, a {
+/* body, h1, h2, h3, p, a {
     text-shadow: 0 0 5px #C8ACD6, 0 0 10px #C8ACD6, 0 0 15px #C8ACD6;
-}
+} */
 
 .join-button {
     position: relative;
@@ -330,7 +337,8 @@ body, h1, h2, h3, p, a {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-image: linear-gradient(rgb(40, 0, 93), rgb(40, 0, 93));
+    background-image: linear-gradient(to bottom right, rgb(56, 6, 113), rgb(1, 8, 25), rgb(116, 139, 199), rgb(4, 19, 56), rgb(0, 0, 0));
+    
 }
 
 .card-front {
@@ -367,21 +375,78 @@ body, h1, h2, h3, p, a {
 
 /* Gallery Section */
 .gallery {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 50px 0;
-    background-color: #000;
+    background-image: linear-gradient(to bottom right, rgb(56, 6, 113), rgb(1, 8, 25), rgb(116, 139, 199), rgb(4, 19, 56), rgb(0, 0, 0));
+    overflow: hidden; /* Prevents content overflow */
+    position: relative; /* Ensures gallery positioning context */
 }
 
-.gallery .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.gallery img {
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #C8ACD6;
+}
+
+.swiper-container {
     width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Prevents overflowing content */
+    padding-bottom: 20px; /* Space for pagination bullets */
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ensures wrapper height matches container */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Allows for responsive height */
+}
+
+.swiper-slide img {
+    max-height: 100%; 
+    max-width: 100%; 
     border-radius: 8px;
     box-shadow: 0 0 10px #C8ACD6;
+    object-fit: cover; /* Keeps image aspect ratio within slide */
+    margin: 0 auto; /* Centers images within slide */
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #C8ACD6;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: #C8ACD6;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff; /* Active bullet styling */
+}
+
 
 /* Footer Styles */
 .footer {
@@ -483,5 +548,133 @@ body, h1, h2, h3, p, a {
     to {
         transform: translateX(0); /* Slide to its normal position */
         opacity: 1; /* Fade in */
+    }
+}
+/* Default for large screens (desktops) */
+/* Already set in your CSS */
+
+/* Medium devices (tablets, 768px and above) */
+@media (max-width: 1024px) {
+    .hero {
+        height: 70vh; /* Reduce hero section height */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .hero p {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .how-it-works .card {
+        max-width: 45%; /* Reduce card width */
+    }
+
+    nav a {
+        font-size: 0.8rem; /* Smaller navigation links */
+    }
+}
+
+/* Small devices (phones, 480px and above) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Further adjust font size */
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Further adjust paragraph size */
+    }
+
+    .about {
+        flex-direction: column; /* Stack about section items */
+    }
+
+    .about-image img {
+        max-width: 80%; /* Adjust image width */
+    }
+
+    .about-text h2 {
+        font-size: 1.6rem; /* Smaller heading size */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Smaller paragraph size */
+    }
+
+    .how-it-works .steps {
+        flex-direction: column; /* Stack steps vertically */
+        align-items: center; /* Center the steps */
+    }
+
+    .card {
+        max-width: 80%; /* Make the card width narrower */
+    }
+
+    .cta-button {
+        padding: 8px 16px; /* Adjust padding */
+        font-size: 0.8rem; /* Adjust font size */
+    }
+
+    .footer .footer-links {
+        flex-direction: column; /* Stack footer links */
+        gap: 10px; /* Adjust spacing */
+    }
+}
+
+/* Extra Small devices (small phones, 320px and above) */
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh; /* Adjust hero section height */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* Smaller heading size */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Smaller paragraph size */
+    }
+
+    .about-text h2 {
+        font-size: 1.4rem; /* Smaller heading size */
+    }
+
+    .about-text p {
+        font-size: 0.9rem; /* Smaller paragraph size */
+    }
+
+    nav ul {
+        gap: 5px; /* Reduce gap between nav items */
+    }
+
+    .join-button {
+        padding: 6px 12px; /* Smaller padding */
+        font-size: 0.75rem; /* Smaller font size */
+    }
+
+    .swiper-slide img {
+        max-width: 90%; /* Ensure images fit within the screen */
+    }
+
+    .how-it-works h1 {
+        font-size: 1.8rem; /* Smaller heading size */
+    }
+
+    .footer {
+        padding: 15px 0; /* Adjust padding */
     }
 }

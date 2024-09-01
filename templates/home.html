@@ -6,52 +6,46 @@
 <!-- Hero Section -->
 <section id="home" class="hero">
     <div class="slideshow">
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+        <div class="slide" style="background-image: url('https://static.vecteezy.com/system/resources/previews/002/099/443/non_2x/programming-code-coding-or-hacker-background-programming-code-icon-made-with-binary-code-digital-binary-data-and-streaming-digital-code-vector.jpg');"></div>
+        <div class="slide" style="background-image: url('../static/images/home1.jpeg');"></div>
+        <div class="slide" style="background-image: url('../static/images/home2.jpeg');"></div>
+        <div class="slide" style="background-image: url('../static/images/home3.jpeg');"></div>
     </div>
     <div class="hero-content">
         <div class="typing-wrapper">
             <h1 class="typing"></h1>
         </div>
         <p class="static-text">TEAM ORION</p>
-        <a href="#about" class="cta-button">Learn More</a>
-        <a href="#join" class="cta-button">Join Now</a>
     </div>
 </section>
 
 <!-- About Us Section -->
 <section id="about" class="about slide-in-section">
     <div class="about-image">
-        <img src="{{ url_for('static', filename='images/aboutme.png') }}" alt="About Us Image">
+        <img src="{{ url_for('static', filename='images/about.jpeg') }}" alt="About Us Image">
     </div>
     <div class="about-text">
         <h2>About Our Society</h2>
-        <p>The Institution of Engineers (India) [IEI] is a statutory body to promote and advance the engineering and technology, established in 1920 and incorporated by Royal Charter in 1935. It is the largest multi-disciplinary professional body of engineers encompassing 15 (fifteen) engineering disciplines with a membership of more than 820 thousand and serving the nation for more than 9 decades. The IEI has its headquarters located in Kolkata with national presence through more than hundred Centres and several Overseas Chapters, Foras and Organ. IEI (Institution of Engineers India) Thapar Chapter is a technical society of Thapar University which organizes various workshops, technical exams, lecture series by industry experts. This society is open for all technical branches of engineering.</p>
+        <p>The Institution of Engineers (India) [IEI] is a statutory body to promote and advance engineering and technology, established in 1920 and incorporated by Royal Charter in 1935. It is the largest multi-disciplinary professional body of engineers encompassing 15 engineering disciplines with a membership of more than 820 thousand, serving the nation for more than 9 decades. The IEI has its headquarters located in Kolkata with a national presence through more than 100 Centres and several Overseas Chapters, Foras, and Organs. IEI (Institution of Engineers India) Thapar Chapter is a technical society of Thapar University which organizes various workshops, technical exams, and lecture series by industry experts. This society is open for all technical branches of engineering.</p>
     </div>
 </section>
 
-<!-- How It Works Section -->
-<section class="how-it-works slide-in-section">
+<!-- Events Section -->
+<section id="events" class="how-it-works slide-in-section">
     <div class="container">
         <h1>Events</h1>
         <div class="steps">
-            
             <div class="step card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="{{ url_for('static', filename='images/image2.png') }}" alt="image2">
+                        <img src="{{ url_for('static', filename='images/image2.png') }}" alt="Orion Techfest">
                         <h2>Orion Techfest</h2>
                     </div>
                     <div class="card-back">
-                        <p>Orion has emerged as TIET's own Science and Technology Festival, an amalgamation of scientific thinking and innovation. It has been built with an aim to enhance the technical culture and to empower the technological spirit in the campus. Orion is a symbol of competitive spirit,
-                            achievement and pride. In this journey, you will find different ways to solve several industrial challenges, and encounter unique competition
-                            along with some motivating orations, state of the art technology and breathtaking performances.</p>
+                        <p>Orion has emerged as TIET's own Science and Technology Festival, an amalgamation of scientific thinking and innovation. It aims to enhance the technical culture and empower the technological spirit on campus. Orion is a symbol of competitive spirit, achievement, and pride. In this journey, you will find different ways to solve several industrial challenges, encounter unique competitions, and experience motivating orations, state-of-the-art technology, and breathtaking performances.</p>
                     </div>
                 </div>
             </div>
-            
             <div class="step card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -62,21 +56,29 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
 <!-- Gallery Section -->
-<section class="gallery">
+<section id="gallery" class="gallery">
     <div class="container">
         <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Image 1">
-            <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image 2">
-            <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Image 3">
-            <!-- Add more images as needed -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/gallery1.jpg') }}" alt="Gallery Image 1"></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/gallery2.JPG') }}" alt="Gallery Image 2"></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/gallery3.jpeg') }}" alt="Gallery Image 3"></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/gallery4.jpg') }}" alt="Gallery Image 4"></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/gallery5.JPG') }}" alt="Gallery Image 5"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </section>
+
 {% endblock %}
