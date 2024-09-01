@@ -102,3 +102,16 @@ body{
     top: 5%;
     left: 97%;
 }
+.start-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the game over screen background */
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: #ddd;
+}
